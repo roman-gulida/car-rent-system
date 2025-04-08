@@ -17,3 +17,7 @@ The project is a car rental system where owners can list their cars and customer
 - Customer can rent a car for a chosen period(by the amount of weeks).
 - Customer can search for cars by model and price and apply filters (e.g., price range, availability).
 - User can view his order history.
+
+
+## Wireframe - Figma
+  https://www.figma.com/design/QFxYfNhDwNQorTC2pXR7VT/Untitled?node-id=0-1&t=9Kw4IgEc45QzC1em-1
