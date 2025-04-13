@@ -20,4 +20,4 @@ The project is a car rental system where owners can list their cars and customer
 
 
 ## Wireframe - Figma
-  https://www.figma.com/design/QFxYfNhDwNQorTC2pXR7VT/Untitled?node-id=0-1&t=9Kw4IgEc45QzC1em-1
+  [Figma wireframe](https://www.figma.com/design/QFxYfNhDwNQorTC2pXR7VT/Untitled?node-id=0-1&t=9Kw4IgEc45QzC1em-1)
