@@ -3,8 +3,8 @@ import Sort from '../components/Sort'
 import Filter from '../components/Filter'
 import CarCard from '../components/CarCard'
 import { useEffect, useState } from 'react'
-import DatePicker from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 function Home() {
     const testCars = [
