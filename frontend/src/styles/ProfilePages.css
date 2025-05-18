@@ -1,0 +1,155 @@
+.account,
+.add-car,
+.booking-history,
+.current-booking,
+.rented-cars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.account-email,
+.account-password {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.account-email input,
+.account-password input,
+.adding-form input,
+.adding-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.account-update-password,
+.account-logout-button,
+.submit-button,
+.rented-car-wrapper button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+
+.account-logout-button {
+  background-color: #f44336;
+}
+
+.account-update-password:hover,
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.account-logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.adding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.image-upload-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.image-upload-input {
+  padding: 0.5rem;
+}
+
+.booking-history h2,
+.current-booking h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.booking-item,
+.current-booking-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-item img,
+.current-booking-item img {
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.booking-item h3,
+.current-booking-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.booking-item p,
+.current-booking-item p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.rented-car-wrapper {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rented-car-wrapper button {
+  margin-top: 1rem;
+  background-color: #f44336;
+}
+
+.rented-car-wrapper button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+  
+  .profile-sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .profile-sidebar a {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .account-update-password,
+  .account-logout-button,
+  .submit-button {
+    align-self: stretch;
+  }
+  
+  .booking-item img,
+  .current-booking-item img {
+    max-width: 100%;
+  }
+}
