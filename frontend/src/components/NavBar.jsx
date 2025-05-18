@@ -23,7 +23,7 @@ function NavBar() {
                     <div className="profile-nav">
                         <Link to="/profile">
                             <img src="#" alt="Profile icon" className="profile-image"/>  
-                            <p className="profile-text">Profile</p>
+                            <p className="profile-text">Profile {user.email}</p>
                         </Link>
                         <button className="logout-button" onClick={() => {
                             logout()

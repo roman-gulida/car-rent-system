@@ -8,6 +8,8 @@ function Register() {
         const [email, setEmail] = useState("")
         const [password, setPassword] = useState("")
     
+        const navigate = useNavigate()
+
         const handleRegister = (e) => {
             e.preventDefault()
     
@@ -19,7 +21,7 @@ function Register() {
             // registration would be added later
             login(userData)
 
-            useNavigate("/profile")
+            navigate("/profile")
         }
 
     return (

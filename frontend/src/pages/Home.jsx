@@ -69,7 +69,7 @@ function Home() {
     useEffect( () => {
         const uniqueBrands = [...new Set(availableCars.map(car => car.brand))]
         setUniqueBrands(uniqueBrands)
-    }, [cars])
+    }, [availableCars])
     
     const handleSearch = e => {
         e.preventDefault()
