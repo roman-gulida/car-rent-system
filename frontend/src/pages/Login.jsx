@@ -8,6 +8,8 @@ function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
+    const navigate = useNavigate()
+
     const handleLogin = (e) => {
         e.preventDefault()
 
@@ -18,7 +20,7 @@ function Login() {
 
         login(userData)
 
-        useNavigate("/profile")
+        navigate("/profile")
     }
 
     return (
