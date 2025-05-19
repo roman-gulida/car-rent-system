@@ -1,6 +1,7 @@
 import CarCard from "../../components/CarCard"
 import { useAuthContext } from "../../contexts/AuthContext"
 import { useRentedCarsContext } from "../../contexts/RentedCarsContext"
+import '../../styles/ProfilePages.css'
 
 function RentedCars() {
     const {cars, removeCar} = useRentedCarsContext()

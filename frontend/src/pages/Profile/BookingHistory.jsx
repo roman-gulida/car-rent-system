@@ -1,6 +1,7 @@
 import { useBookingContext } from "../../contexts/BookingContext";
 import { useRentedCarsContext } from "../../contexts/RentedCarsContext";
 import { useAuthContext } from "../../contexts/AuthContext";
+import '../../styles/ProfilePages.css'
 
 function BookingHistory() {
   const { getUserBookings } = useBookingContext();
@@ -9,13 +10,10 @@ function BookingHistory() {
 
   const userBookings = getUserBookings();
 
-  // Optional: get car details for each booking
   const bookingsWithCarInfo = userBookings.map(booking => {
     const car = cars.find(c => c.id === booking.carId)
     return { ...booking, car };
-  });
-
-//   if (!user) return <p>Please log in to see your booking history.</p>
+  })
 
   return (
     <div className="booking-history">
@@ -40,7 +38,7 @@ function BookingHistory() {
         </ul>
       )}
     </div>
-  );
+  )
 }
 
-export default BookingHistory;
+export default BookingHistory

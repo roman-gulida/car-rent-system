@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import '../styles/Home.css'
 
 function Sort({sortValue, setSortValue}) {
     return (

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuthContext } from '../../contexts/AuthContext'
+import '../../styles/ProfilePages.css'
 
 function Account() {
     const {user, setUser, login, logout} = useAuthContext()

@@ -35,24 +35,21 @@ export function BookingProvider({ children }) {
 
     const updatedCars = cars.map(car =>
       car.id === carId ? { ...car, bookings: [...car.bookings, booking] } : car
-    );
-    setCars(updatedCars);
+    )
+    setCars(updatedCars)
 
-    setBookings(prev => [...prev, booking]);
-
-    // Update user booked cars (if managed in AuthContext or similar)
-    // Alternatively, retrieve bookings for user from the cars
-  };
+    setBookings(prev => [...prev, booking])
+  }
 
   const getUserBookings = () => {
     return bookings.filter(b => b.userEmail === user?.email);
-  };
+  }
 
   return (
     <BookingContext.Provider value={{ bookings, bookCar, getUserBookings }}>
       {children}
     </BookingContext.Provider>
-  );
+  )
 }
 
 export function useBookingContext() {

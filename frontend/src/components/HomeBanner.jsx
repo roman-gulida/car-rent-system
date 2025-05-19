@@ -1,3 +1,5 @@
+import '../styles/Home.css'
+
 function HomeBanner() {
     return (
         <div className="home-banner">

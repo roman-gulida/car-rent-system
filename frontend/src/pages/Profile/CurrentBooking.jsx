@@ -2,6 +2,7 @@ import { useBookingContext } from '../../contexts/BookingContext'
 import { useRentedCarsContext } from '../../contexts/RentedCarsContext'
 import { useAuthContext } from '../../contexts/AuthContext'
 import CarCard from '../../components/CarCard'
+import '../../styles/ProfilePages.css'
 
 function CurrentBooking() {
     const { getUserBookings } = useBookingContext()
@@ -13,7 +14,6 @@ function CurrentBooking() {
         new Date(b.endDate) > new Date()
     )
 
-    // Combine with car info
     const bookingsWithCarInfo = currentBookings.map(booking => {
         const car = cars.find(c => c.id === booking.carId)
         return { ...booking, car }
