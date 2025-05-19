@@ -107,8 +107,9 @@
 .navbar-contrainer {
   background-color: #333;
   color: white;
-  padding: 15px; 
+  padding: 8px; 
   width: 100%;
+  margin-bottom: 10px;
 }
 
 nav {
@@ -117,7 +118,7 @@ nav {
   align-items: center;
   max-width: none; 
   width: 100%;
-  padding: 0 2rem; 
+  padding: 8px; 
 }
 
 .navbar-brand {
@@ -158,6 +159,7 @@ nav {
 .login-image, .profile-image {
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
 
 .profile-nav {

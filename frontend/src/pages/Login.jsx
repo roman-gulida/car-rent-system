@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuthContext } from '../contexts/AuthContext'
 import { useState } from 'react'
+import '../styles/Auth.css'
 
 function Login() {
     const {user, login, logout} = useAuthContext()

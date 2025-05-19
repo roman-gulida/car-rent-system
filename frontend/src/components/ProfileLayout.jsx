@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom"
+import '../styles/CarCard.css'
 
 function ProfileLayout() {
     const user = JSON.parse(localStorage.getItem("user"))
@@ -6,7 +7,7 @@ function ProfileLayout() {
 
     return (
         <div className="profile-layout">
-            <nav className="profile-nav">
+            <nav className="profile-sidebar">
                 <NavLink to={"account"} className={({isActive}) => isActive ? "active" : ""}>Account</NavLink>
                 <NavLink to={"current-booking"} className={({isActive}) => isActive ? "active" : ""}>Current Booking</NavLink>
                 <NavLink to={"booking-history"} className={({isActive}) => isActive ? "active" : ""}>Booking History</NavLink>
