@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useAuthContext } from '../../contexts/AuthContext'
 import { useRentedCarsContext } from '../../contexts/RentedCarsContext'
+import '../../styles/ProfilePages.css'
 
 function AddCar() {
     const { user } = useAuthContext()
@@ -41,6 +42,16 @@ function AddCar() {
         }
 
         addCar(carData)
+        
+        setBrand("")
+        setModel("")
+        setReleaseDate("")
+        setPricePerDay("")
+        setDescription("")
+        setImage(null)
+        document.getElementById("image-upload").value = ""
+
+        alert("Car successfully added!")
     }
 
     return (
@@ -50,11 +61,11 @@ function AddCar() {
                     Upload Car Image
                     <input type="file" id="image-upload" className="image-upload-input" accept="image/*" onChange={handleFileChange}/>
                 </label>
-                <input type="text" className="adding-brand" placeholder="Car Brand" onChange={e => setBrand(e.target.value)}/>
-                <input type="text" className="adding-model" placeholder="Model" onChange={e => setModel(e.target.value)}/>
-                <input type="number" className="adding-release-date" placeholder="Release Date" onChange={e => setReleaseDate(e.target.value)}/>
-                <input type="number" className="adding-price" placeholder="Price Per Day" onChange={e => setPricePerDay(e.target.value)}/>
-                <input type="text" className="adding-description" placeholder="Description" onChange={e => setDescription(e.target.value)}/>
+                <input type="text" className="adding-brand" placeholder="Car Brand" value={brand} onChange={e => setBrand(e.target.value)} />
+                <input type="text" className="adding-model" placeholder="Model" value={model} onChange={e => setModel(e.target.value)} />
+                <input type="number" className="adding-release-date" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} />
+                <input type="number" className="adding-price" placeholder="Price Per Day" value={pricePerDay} onChange={e => setPricePerDay(e.target.value)} />
+                <input type="text" className="adding-description" placeholder="Description" value={description} onChange={e => setDescription(e.target.value)} />
                 <button className="submit-button" type="submit">Submit</button>
             </form>
         </div>

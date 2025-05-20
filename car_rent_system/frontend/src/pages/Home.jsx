@@ -5,10 +5,11 @@ import CarCard from '../components/CarCard'
 import { useEffect, useState } from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import '../styles/Home.css'
 
 function Home() {
     const testCars = [
-        {id: 1,  brand: "bmw", model: "m5", releaseDate: "2022", pricePerDay: 10, 
+        {id: 1,  brand: "bmw", model: "m5", releaseDate: "2022", pricePerDay: 10, ownerContact: "user",
             bookings: [ {startDate: new Date("2025-04-10T10:00"), endDate: new Date("2026-04-15T12:00")}]
         },
         {id: 2,  brand: "tesla", model: "model3", releaseDate: "2018", pricePerDay: 100, 

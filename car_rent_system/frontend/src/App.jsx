@@ -12,7 +12,7 @@ import { Routes, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import PrivateRoute from './components/PrivateRoute'
 import AdminRoute from './components/AdminRoute'
-
+import { Navigate } from 'react-router-dom';
 
 function App() {
 
@@ -26,7 +26,12 @@ function App() {
           <Route path='/register' element={<Register />}/>
           <Route path='/profile' element={
             <PrivateRoute>
-              <ProfileLayout />
+              <Navigate to="/profile/account" replace/>
+            </PrivateRoute>
+          }/>    
+          <Route path='/profile' element={
+            <PrivateRoute>
+              <ProfileLayout />          
             </PrivateRoute>
           }>
             <Route path='account' element={<Account />}/>

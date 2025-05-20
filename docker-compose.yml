@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: car_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "#Black1234"
+      MYSQL_DATABASE: car_rent_db
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - car_network
+
+  backend:
+    build:
+      context: ./car_rent_system
+    container_name: car_backend
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/car_rent_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: "#Black1234"
+    networks:
+      - car_network
+
+  frontend:
+    build:
+      context: ./car_rent_system/frontend
+    container_name: car_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - car_network
+
+volumes:
+  mysql_data:
+
+networks:
+  car_network:
