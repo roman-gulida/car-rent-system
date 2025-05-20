@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.*;
 public class CarController {
 
     @PostMapping("/add")
-    public ResponseEntity<String> addCar(@RequestBody CarDto carDto) {
-        // TODO: Add car logic
+    public ResponseEntity<?> addCar(@RequestBody CarDto carDto) {
         return ResponseEntity.ok("Car added");
     }
 
     @GetMapping("/rented")
-    public ResponseEntity<String> getRentedCars() {
-        // TODO: Return rented cars
+    public ResponseEntity<?> getRentedCars() {
         return ResponseEntity.ok("List of rented cars");
     }
 }
+

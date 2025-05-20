@@ -19,7 +19,6 @@ public class Car {
     @OneToMany(mappedBy = "car")
     private List<Booking> bookings = new ArrayList<>();
 
-    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

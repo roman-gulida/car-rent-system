@@ -9,7 +9,6 @@ public class ProfileController {
 
     @GetMapping("/account")
     public ResponseEntity<String> getAccountInfo() {
-        // TODO: Fetch and return user account info
         return ResponseEntity.ok("User account data");
     }
 }

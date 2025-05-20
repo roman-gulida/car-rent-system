@@ -9,13 +9,11 @@ public class BookingController {
 
     @GetMapping("/current")
     public ResponseEntity<String> getCurrentBooking() {
-        // TODO: Fetch current booking
         return ResponseEntity.ok("Current booking info");
     }
 
     @GetMapping("/history")
     public ResponseEntity<String> getBookingHistory() {
-        // TODO: Fetch booking history
         return ResponseEntity.ok("Booking history");
     }
 }

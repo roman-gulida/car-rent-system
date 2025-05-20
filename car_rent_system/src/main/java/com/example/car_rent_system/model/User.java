@@ -19,8 +19,6 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Booking> bookings = new ArrayList<>();
 
-    // Getters and Setters
-
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
